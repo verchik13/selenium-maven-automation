@@ -1,5 +1,6 @@
 package com.dice;
 
+import java.time.LocalDateTime;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -29,7 +30,8 @@ public class DiceJobSearch {
 		 */
 		
 		String url = "https://dice.com";
-		driver.get(url);
+		driver.get(url);  //or driver.navigate
+		
 		
 		String actualTitle = driver.getTitle();
 		String expectedTitle = "Job Search for Technology Professionals | Dice.com";
@@ -64,6 +66,7 @@ public class DiceJobSearch {
 					countResult +" result in "+ location);
 		}
 		driver.close();
+		System.out.println("Test Completed -" + LocalDateTime.now());
 			
 	}
 
